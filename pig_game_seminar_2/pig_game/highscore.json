@@ -1,0 +1,33 @@
+{
+  "players": {
+    "Alice": {
+      "name": "Alice",
+      "games_played": 0,
+      "wins": 0,
+      "losses": 0,
+      "avg_points": 0.0
+    },
+    "Bob": {
+      "name": "Bob",
+      "games_played": 0,
+      "wins": 0,
+      "losses": 0,
+      "avg_points": 0.0
+    },
+    "A": {
+      "name": "A",
+      "games_played": 2,
+      "wins": 2,
+      "losses": 0,
+      "avg_points": 100.0
+    },
+    "B": {
+      "name": "B",
+      "games_played": 2,
+      "wins": 0,
+      "losses": 2,
+      "avg_points": 0.0
+    }
+  },
+  "games": {}
+}

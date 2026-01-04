@@ -1,0 +1,13 @@
+[flake8]
+# Håll oss nära Black-standard (88) för att slippa onödiga konflikter.
+max-line-length = 120
+
+# Endast nödvändiga undantag:
+# - E203 & W503: kända konflikter med Black
+# - D212: konflikter med Google-stil (first line should NOT be multiline)
+extend-ignore = E203, W503, D212
+
+# Låt D400/D401/D403/D415 vara AKTIVA → vi fixar docstrings hellre än att tysta dem.
+docstring-convention = google
+
+exclude = .venv, __pycache__, build, dist, doc, .git, .pytest_cache

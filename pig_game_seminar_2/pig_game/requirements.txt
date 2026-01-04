@@ -1,0 +1,32 @@
+# ============================================================
+# Pig Game — Requirements
+# Complete and cross-platform toolchain
+# ============================================================
+
+# --- Testning & Täckning ---
+pytest>=8.3.2
+pytest-cov>=5.0
+coverage>=7.6.1
+
+# --- Kodkvalitet & Stil ---
+flake8>=7.1.1
+flake8-docstrings>=1.7.0
+flake8-polyfill>=1.0.2
+flake8-bugbear>=24.2.6
+mccabe>=0.7.0
+black>=24.4.2
+isort>=5.13.2
+autopep8>=2.3.1
+docformatter>=1.7.5
+
+# --- Dokumentation ---
+pdoc>=14.3.0
+graphviz>=0.20.3
+
+# --- Statisk analys / UML ---
+pylint==3.2.6  # stable version with pyreverse support
+
+# --- Hjälpmoduler för säkerhet och struktur ---
+setuptools>=75.1.0
+wheel>=0.44.0
+pip>=24.2

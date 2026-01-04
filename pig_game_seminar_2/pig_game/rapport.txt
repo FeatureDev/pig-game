@@ -1,0 +1,221 @@
+=== REPORT GENERATED: 2025-11-06 17:13:24
+# Test results
+============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-8.4.2, pluggy-1.6.0 -- C:\Users\morga\Desktop\pig_game_seminar_2\pig_game\.venv\Scripts\python.exe
+cachedir: .pytest_cache
+rootdir: C:\Users\morga\Desktop\pig_game_seminar_2
+configfile: pytest.ini
+plugins: cov-7.0.0
+collecting ... collected 152 items
+
+tests\test_cheat.py::test_init_with_valid_game PASSED                    [  0%]
+tests\test_cheat.py::test_init_with_invalid_game_raises PASSED           [  1%]
+tests\test_cheat.py::test_add_points_adds_to_existing_player PASSED      [  1%]
+tests\test_cheat.py::test_add_points_on_missing_player_prints PASSED     [  2%]
+tests\test_cheat.py::test_reset_score_resets_value PASSED                [  3%]
+tests\test_cheat.py::test_reset_score_nonexistent_player PASSED          [  3%]
+tests\test_cheat.py::test_auto_win_sets_score_and_saves PASSED           [  4%]
+tests\test_cheat.py::test_auto_win_invalid_player PASSED                 [  5%]
+tests\test_cheat.py::test_set_dice_value_sets_all PASSED                 [  5%]
+tests\test_cheat.py::test_set_dice_value_no_dice_hand PASSED             [  6%]
+tests\test_cheat.py::test_get_player_finds_and_misses PASSED             [  7%]
+tests\test_cheat.py::test_eq_and_not_eq PASSED                           [  7%]
+tests\test_cheat.py::test_debug_reset_success PASSED                     [  8%]
+tests\test_cheat.py::test_debug_reset_failure PASSED                     [  9%]
+tests\test_cheat.py::test_cprint_only_prints_under_pytest PASSED         [  9%]
+tests\test_dice.py::test_dice_instance_creation PASSED                   [ 10%]
+tests\test_dice.py::test_roll_returns_int PASSED                         [ 11%]
+tests\test_dice.py::test_roll_range_multiple_times PASSED                [ 11%]
+tests\test_dice.py::test_roll_distribution_not_constant PASSED           [ 12%]
+tests\test_dice.py::test_random_seed_determinism PASSED                  [ 13%]
+tests\test_dice.py::test_multiple_dice_independent PASSED                [ 13%]
+tests\test_dice.py::test_roll_min_value_possible PASSED                  [ 14%]
+tests\test_dice.py::test_roll_max_value_possible PASSED                  [ 15%]
+tests\test_dice.py::test_roll_mean_within_expected_range PASSED          [ 15%]
+tests\test_dice.py::test_repr_and_str_consistency PASSED                 [ 16%]
+tests\test_game.py::test_game_initialization_creates_players_and_dice PASSED [ 17%]
+tests\test_game.py::test_roll_adds_to_current_score PASSED               [ 17%]
+tests\test_game.py::test_roll_one_switches_turn PASSED                   [ 18%]
+tests\test_game.py::test_hold_adds_score_and_switches_player PASSED      [ 19%]
+tests\test_game.py::test_win_condition_sets_winner PASSED                [ 19%]
+tests\test_game.py::test_restart_resets_state PASSED                     [ 20%]
+tests\test_game.py::test_cprint_only_outputs_in_pytest_context PASSED    [ 21%]
+tests\test_game.py::test_add_highscore_entry PASSED                      [ 21%]
+tests\test_game.py::test_invalid_player_roll_raises PASSED               [ 22%]
+tests\test_game.py::test_reset_turn_score_does_not_affect_total PASSED   [ 23%]
+tests\test_game_cmd.py::test_cprint_prints_under_pytest PASSED           [ 23%]
+tests\test_game_cmd.py::test_do_start_starts_game PASSED                 [ 24%]
+tests\test_game_cmd.py::test_do_start_with_ai_and_difficulty PASSED      [ 25%]
+tests\test_game_cmd.py::test_do_start_missing_args PASSED                [ 25%]
+tests\test_game_cmd.py::test_do_ai_sets_difficulty PASSED                [ 26%]
+tests\test_game_cmd.py::test_do_ai_invalid_input PASSED                  [ 26%]
+tests\test_game_cmd.py::test_do_ai_no_game PASSED                        [ 27%]
+tests\test_game_cmd.py::test_do_roll_no_game PASSED                      [ 28%]
+tests\test_game_cmd.py::test_do_roll_with_active_game PASSED             [ 28%]
+tests\test_game_cmd.py::test_do_roll_with_ai_turn PASSED                 [ 29%]
+tests\test_game_cmd.py::test_do_hold_no_game PASSED                      [ 30%]
+tests\test_game_cmd.py::test_do_hold_with_game PASSED                    [ 30%]
+tests\test_game_cmd.py::test_do_hold_triggers_ai_turn PASSED             [ 31%]
+tests\test_game_cmd.py::test_do_status_no_game PASSED                    [ 32%]
+tests\test_game_cmd.py::test_do_status_with_game PASSED                  [ 32%]
+tests\test_game_cmd.py::test_do_rename_no_game PASSED                    [ 33%]
+tests\test_game_cmd.py::test_do_rename_empty_name PASSED                 [ 34%]
+tests\test_game_cmd.py::test_do_rename_success PASSED                    [ 34%]
+tests\test_game_cmd.py::test_do_pause_no_game PASSED                     [ 35%]
+tests\test_game_cmd.py::test_do_pause_with_game PASSED                   [ 36%]
+tests\test_game_cmd.py::test_do_continue_no_key PASSED                   [ 36%]
+tests\test_game_cmd.py::test_do_continue_no_data PASSED                  [ 37%]
+tests\test_game_cmd.py::test_do_continue_success PASSED                  [ 38%]
+tests\test_game_cmd.py::test_do_highscores_no_data PASSED                [ 38%]
+tests\test_game_cmd.py::test_do_highscores_with_data PASSED              [ 39%]
+tests\test_game_cmd.py::test_do_games_no_data PASSED                     [ 40%]
+tests\test_game_cmd.py::test_do_games_with_data PASSED                   [ 40%]
+tests\test_game_cmd.py::test_do_reset_cancelled PASSED                   [ 41%]
+tests\test_game_cmd.py::test_do_reset_confirmed PASSED                   [ 42%]
+tests\test_game_cmd.py::test_do_quit_returns_true PASSED                 [ 42%]
+tests\test_game_cmd.py::test_default_prints_warning PASSED               [ 43%]
+tests\test_game_cmd.py::test_emptyline_returns_false PASSED              [ 44%]
+tests\test_game_cmd.py::test_show_turn_outputs_for_ai_and_human PASSED   [ 44%]
+tests\test_game_cmd.py::test_ai_turn_calls_game_methods PASSED           [ 45%]
+tests\test_game_cmd.py::test_do_start_invalid_game_init PASSED           [ 46%]
+tests\test_game_cmd.py::test_do_roll_handles_exception PASSED            [ 46%]
+tests\test_game_cmd.py::test_do_cheat_invalid_number PASSED              [ 47%]
+tests\test_game_cmd.py::test_do_cheat_usage PASSED                       [ 48%]
+tests\test_game_cmd.py::test_ai_turn_handles_exception PASSED            [ 48%]
+tests\test_game_cmd.py::test_default_empty_command PASSED                [ 49%]
+tests\test_game_cmd.py::test_reset_handles_eof PASSED                    [ 50%]
+tests\test_game_cmd.py::test_start_ai_invalid_difficulty_defaults_normal PASSED [ 50%]
+tests\test_game_cmd.py::test_roll_when_game_finished PASSED              [ 51%]
+tests\test_game_cmd.py::test_hold_when_game_finished PASSED              [ 51%]
+tests\test_highscore.py::test_initialization_creates_file PASSED         [ 52%]
+tests\test_highscore.py::test_initialization_loads_existing PASSED       [ 53%]
+tests\test_highscore.py::test_initialization_invalid_data_resets PASSED  [ 53%]
+tests\test_highscore.py::test_load_handles_corrupt_file PASSED           [ 54%]
+tests\test_highscore.py::test_save_handles_ioerror PASSED                [ 55%]
+tests\test_highscore.py::test_register_player_adds_new PASSED            [ 55%]
+tests\test_highscore.py::test_register_player_existing_does_not_duplicate PASSED [ 56%]
+tests\test_highscore.py::test_update_score_updates_wins_and_avg PASSED   [ 57%]
+tests\test_highscore.py::test_save_score_alias_calls_update_score PASSED [ 57%]
+tests\test_highscore.py::test_change_name_success_and_persists PASSED    [ 58%]
+tests\test_highscore.py::test_change_name_ignores_invalid PASSED         [ 59%]
+tests\test_highscore.py::test_save_and_load_game PASSED                  [ 59%]
+tests\test_highscore.py::test_get_all_games_returns_dict PASSED          [ 60%]
+tests\test_highscore.py::test_get_top_players_sorted PASSED              [ 61%]
+tests\test_highscore.py::test_get_top_players_empty PASSED               [ 61%]
+tests\test_highscore.py::test_reset_all_clears_data PASSED               [ 62%]
+tests\test_highscore.py::test_repr_displays_counts PASSED                [ 63%]
+tests\test_highscore.py::test_load_invalid_file_resets_data PASSED       [ 63%]
+tests\test_highscore.py::test_change_name_missing_player PASSED          [ 64%]
+tests\test_highscore.py::test_save_game_and_load PASSED                  [ 65%]
+tests\test_highscore.py::test_save_handles_exception PASSED              [ 65%]
+tests\test_highscore.py::test_load_handles_invalid_json PASSED           [ 66%]
+tests\test_highscore.py::test_reset_all_creates_fresh_data PASSED        [ 67%]
+tests\test_highscore.py::test_load_file_structure_invalid PASSED         [ 67%]
+tests\test_highscore.py::test_repr_and_save_failure PASSED               [ 68%]
+tests\test_init.py::test_src_package_importable PASSED                   [ 69%]
+tests\test_init.py::test_src_has_expected_modules PASSED                 [ 69%]
+tests\test_init.py::test_module_imports_individually PASSED              [ 70%]
+tests\test_init.py::test_src_doc_and_file_exist PASSED                   [ 71%]
+tests\test_init.py::test_src_path_points_to_directory PASSED             [ 71%]
+tests\test_init.py::test_no_circular_imports PASSED                      [ 72%]
+tests\test_init.py::test_src_can_be_reloaded PASSED                      [ 73%]
+tests\test_init.py::test_src_all_modules_have_docstrings PASSED          [ 73%]
+tests\test_init.py::test_src_directory_contains_init PASSED              [ 74%]
+tests\test_init.py::test_src_module_listing_stable PASSED                [ 75%]
+tests\test_intelligence.py::test_init_valid_levels PASSED                [ 75%]
+tests\test_intelligence.py::test_init_invalid_level_raises[noob] PASSED  [ 76%]
+tests\test_intelligence.py::test_init_invalid_level_raises[] PASSED      [ 76%]
+tests\test_intelligence.py::test_init_invalid_level_raises[None] PASSED  [ 77%]
+tests\test_intelligence.py::test_easy_strategy_decision[3-roll] PASSED   [ 78%]
+tests\test_intelligence.py::test_easy_strategy_decision[8-hold] PASSED   [ 78%]
+tests\test_intelligence.py::test_normal_strategy_threshold PASSED        [ 79%]
+tests\test_intelligence.py::test_hard_strategy_branches[5-50-roll] PASSED [ 80%]
+tests\test_intelligence.py::test_hard_strategy_branches[25-50-hold] PASSED [ 80%]
+tests\test_intelligence.py::test_hard_strategy_branches[10-80-roll] PASSED [ 81%]
+tests\test_intelligence.py::test_hard_strategy_branches[15-80-hold] PASSED [ 82%]
+tests\test_intelligence.py::test_hard_strategy_branches[8-95-hold] PASSED [ 82%]
+tests\test_intelligence.py::test_hard_strategy_branches[12-95-hold] PASSED [ 83%]
+tests\test_intelligence.py::test_win_condition_triggers_hold PASSED      [ 84%]
+tests\test_intelligence.py::test_set_level_and_invalid PASSED            [ 84%]
+tests\test_intelligence.py::test_repr_and_str_methods PASSED             [ 85%]
+tests\test_intelligence.py::test_should_hold_valid_and_invalid PASSED    [ 86%]
+tests\test_intelligence.py::test_debug_force_decision_valid_and_fallback PASSED [ 86%]
+tests\test_intelligence.py::test_cover_all_strategies_runs_all PASSED    [ 87%]
+tests\test_intelligence.py::test_invalid_internal_level_path PASSED      [ 88%]
+tests\test_player.py::test_init_valid_and_prints PASSED                  [ 88%]
+tests\test_player.py::test_init_invalid_type_raises[None] PASSED         [ 89%]
+tests\test_player.py::test_init_invalid_type_raises[123] PASSED          [ 90%]
+tests\test_player.py::test_init_invalid_type_raises[bad_name2] PASSED    [ 90%]
+tests\test_player.py::test_init_invalid_type_raises[bad_name3] PASSED    [ 91%]
+tests\test_player.py::test_init_empty_name_raises[] PASSED               [ 92%]
+tests\test_player.py::test_init_empty_name_raises[   ] PASSED            [ 92%]
+tests\test_player.py::test_add_score_adds_points PASSED                  [ 93%]
+tests\test_player.py::test_add_score_rejects_negative PASSED             [ 94%]
+tests\test_player.py::test_add_score_rejects_non_int PASSED              [ 94%]
+tests\test_player.py::test_reset_score_sets_to_zero PASSED               [ 95%]
+tests\test_player.py::test_rename_valid_and_prints PASSED                [ 96%]
+tests\test_player.py::test_rename_invalid_type PASSED                    [ 96%]
+tests\test_player.py::test_rename_empty_string_raises PASSED             [ 97%]
+tests\test_player.py::test_eq_same_and_different PASSED                  [ 98%]
+tests\test_player.py::test_repr_and_str PASSED                           [ 98%]
+tests\test_player.py::test_clone_creates_new_identical_player PASSED     [ 99%]
+tests\test_player.py::test_cprint_writes_under_pytest PASSED             [100%]
+
+=============================== tests coverage ================================
+_______________ coverage: platform win32, python 3.13.7-final-0 _______________
+
+Name                  Stmts   Miss  Cover   Missing
+---------------------------------------------------
+src\__init__.py           0      0   100%
+src\cheat.py             63      3    95%   7-8, 67
+src\dice.py               4      0   100%
+src\game.py              89      8    91%   43-44, 72, 79, 126, 144, 152, 159
+src\game_cmd.py         215     18    92%   88, 100-101, 115-123, 145-146, 249-250, 281, 347, 351
+src\highscore.py         94      8    91%   42, 56, 58, 71, 95, 111, 125, 149
+src\intelligence.py      72      0   100%
+src\player.py            47      0   100%
+---------------------------------------------------
+TOTAL                   584     37    94%
+============================= 152 passed in 2.12s =============================
+# Coverage summary
+============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-8.4.2, pluggy-1.6.0
+rootdir: C:\Users\morga\Desktop\pig_game_seminar_2
+configfile: pytest.ini
+plugins: cov-7.0.0
+collected 152 items
+
+tests\test_cheat.py ...............                                      [  9%]
+tests\test_dice.py ..........                                            [ 16%]
+tests\test_game.py ..........                                            [ 23%]
+tests\test_game_cmd.py ............................................      [ 51%]
+tests\test_highscore.py .........................                        [ 68%]
+tests\test_init.py ..........                                            [ 75%]
+tests\test_intelligence.py ....................                          [ 88%]
+tests\test_player.py ..................                                  [100%]
+
+=============================== tests coverage ================================
+_______________ coverage: platform win32, python 3.13.7-final-0 _______________
+
+Name                  Stmts   Miss  Cover   Missing
+---------------------------------------------------
+src\__init__.py           0      0   100%
+src\cheat.py             63      3    95%   7-8, 67
+src\dice.py               4      0   100%
+src\game.py              89      8    91%   43-44, 72, 79, 126, 144, 152, 159
+src\game_cmd.py         215     18    92%   88, 100-101, 115-123, 145-146, 249-250, 281, 347, 351
+src\highscore.py         94      8    91%   42, 56, 58, 71, 95, 111, 125, 149
+src\intelligence.py      72      0   100%
+src\player.py            47      0   100%
+---------------------------------------------------
+TOTAL                   584     37    94%
+============================= 152 passed in 2.03s =============================
+# Assertion count
+tests/test_cheat.py:18
+tests/test_dice.py:15
+tests/test_game.py:18
+tests/test_game_cmd.py:43
+tests/test_highscore.py:30
+tests/test_init.py:16
+tests/test_intelligence.py:17
+tests/test_player.py:20
